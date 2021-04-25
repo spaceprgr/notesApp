@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 
 <head>
     <link rel="stylesheet" href="index.css">
@@ -21,6 +21,16 @@
 var textElement = document.getElementById("note")
 
 function saveNote() {
-    
+    if(textElement.value == ""){
+		return alert(text is empty!")
+	}
+	const id = getNoteId()
+	let noteObject = getExistingNotes()
+	if(!noteObject){
+		noteObject} = {}
+	}
+	noteObject(id) = textElement.value
+	localStorage.setItem("notes", JSON.stringify(noteObject))
+	alert("Note Saved!")
 }
 </script>
