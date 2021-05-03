@@ -1,5 +1,5 @@
 body {
-    background-color: aqua;
+    background-color: #7b9d64;
     color: black;
 }
 
@@ -25,7 +25,7 @@ height: 30vh;
 }
 
 .submit {
-    background-color: #4CAF50;
+    background-color: #20514a;
     color: white;
     padding: 12px 20px;
     border: none;

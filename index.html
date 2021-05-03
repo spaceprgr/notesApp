@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 
-<head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="index.css">
     <script src="index.js"></script>
     <title>Note Taker App</title>
@@ -11,8 +13,8 @@
             <textarea id="note" name="note-text" class="note-area"></textarea>
             <br>
             <button id="submit" onclick="saveNote()" class="submit">Save Note</button>
-        <div class="notes-link">
-            <a href="index2.html" >View Notes</a>
+        <div class="notes-list">
+            <a href="index2.html">View Notes</a>
         </div> 
     </div>
 </body>
@@ -21,16 +23,19 @@
 var textElement = document.getElementById("note")
 
 function saveNote() {
-    if(textElement.value == ""){
-		return alert(text is empty!")
+    if (textElement.value === ""){
+		return alert("text is empty");
 	}
-	const id = getNoteId()
-	let noteObject = getExistingNotes()
-	if(!noteObject){
-		noteObject} = {}
+	
+	const id = getNoteId();
+	let noteObject = getExistingNotes();
+	if (!noteObject){
+		noteObject = {}
 	}
-	noteObject(id) = textElement.value
-	localStorage.setItem("notes", JSON.stringify(noteObject))
+	
+	noteObject[id] = textElement.value;
+	localStorage.setItem('notes', JSON.stringify(noteObject));
 	alert("Note Saved!")
+	
 }
 </script>

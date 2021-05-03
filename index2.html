@@ -16,13 +16,13 @@
 
 <script>
 (function getNotes(){
-	let notes = getExistingNotes()
-	let notesArray = Object.values(notes)
-	let orderedList = document.getElementById("notes-list")
+	let notes = getExistingNotes();
+	let notesArray = Object.values(notes);
+	let orderedList = document.getElementById('notes-list')
 	notesArray.forEach(note => {
-		let listItem = document.createElement("li")
+		let listItem = document.createElement('li')
 		listItem.innerHTML = note
-		ordereList.appendChild(listItem)
+		orderedList.appendChild(listItem)
 	})
 })()		
 
